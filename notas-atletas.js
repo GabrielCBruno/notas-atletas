@@ -4,7 +4,7 @@ class Atletas {
         this.notas = notas;
     }
 
-    ordenar() {
+    ordenarNotasCrescente() {
         let ordenado = this.notas;
         let aux;
         for(let i = 0; i < ordenado.length - 1; i++) {
@@ -20,7 +20,7 @@ class Atletas {
     }
 
     calcularMedia() {
-        let notasMeio = this.ordenar().slice(1,4);
+        let notasMeio = this.ordenarNotasCrescente().slice(1,4);
         let soma = notasMeio.reduce(function(total, atual) {
             return total + atual;
         }, 0);
