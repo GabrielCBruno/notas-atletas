@@ -20,8 +20,8 @@ class Atletas {
     }
 
     calcularMedia() {
-        let notasMeio = this.ordenarNotasCrescente().slice(1,4);
-        let soma = notasMeio.reduce(function(total, atual) {
+        let notasOrdenadas = this.ordenarNotasCrescente().slice(1,4);
+        let soma = notasOrdenadas.reduce(function(total, atual) {
             return total + atual;
         }, 0);
         this.media = soma/3;
